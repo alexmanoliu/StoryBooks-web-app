@@ -19,10 +19,11 @@ const index = require('./routes/index');
 const auth = require('./routes/auth');
 const stories = require('./routes/stories');
 
+
 // Load Keys
 const keys = require('./config/keys');
 
-// Handlebars Helpers
+//handlebars helpers
 const {
   truncate,
   stripTags
@@ -39,14 +40,15 @@ mongoose.connect(keys.mongoURI, {
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+//parse application/json
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-// Handlebars Middleware
+//handlebars middleware
 app.engine('handlebars', exphbs({
-  helpers: {
-    truncate: truncate,
-    stripTags: stripTags
+  helpers:{
+  truncate: truncate,
+  stripTags: stripTags
   },
   defaultLayout:'main'
 }));
@@ -69,7 +71,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Set static folder
+//set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Use Routes
