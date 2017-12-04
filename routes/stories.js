@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
 
 // Add Story Form
 router.get('/add', ensureAuthenticated, (req, res) => {
+
   res.render('stories/add');
 });
 
