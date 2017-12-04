@@ -23,7 +23,7 @@ router.get('/add', ensureAuthenticated, (req, res) => {
 });
 
 // Process Add Story
-router.post('/', (req, res) => {
+router.post('/add/stories', (req, res) => {
   let allowComments;
 
   if(req.body.allowComments){
@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
   new Story(newStory)
     .save()
     .then(story => {
-      res.redirect(`stories/show/${story.id}`);
+      res.redirect(`/stories/show/${story.id}`);
     });
 });
 
