@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
   new Story(newStory)
     .save()
     .then(story => {
-      res.redirect(`/stories/show/${story.id}`);
+      res.redirect(`stories/show/${story.id}`);
     });
 });
 
