@@ -7,7 +7,7 @@
     "start": "node app.js"
   },
   "author": "alexmnl88",
-  "license": "MIT",
+  "license": "alexmnl88",
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",

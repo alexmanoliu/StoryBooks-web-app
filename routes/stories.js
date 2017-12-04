@@ -42,8 +42,8 @@ router.post('/', (req, res) => {
   // Create Story
   new Story(newStory)
     .save()
-    .then(story => {
-      res.redirect(`/stories/show/${story.id}`);
+    .then(Story => {
+      res.redirect(`/stories/show/${Story.id}`);
     });
 });
 
