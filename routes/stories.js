@@ -23,7 +23,7 @@ router.get('/add', ensureAuthenticated, (req, res) => {
 });
 
 // Process Add Story
-router.post('/add/stories', (req, res) => {
+router.post('/', (req, res) => {
   let allowComments;
 
   if(req.body.allowComments){
