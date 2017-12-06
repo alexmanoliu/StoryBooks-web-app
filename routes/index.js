@@ -14,8 +14,8 @@ router.get('/dashboard', ensureAuthenticated, (req, res) => {
     res.render('index/dashboard', {
       stories: stories
     });
-  })
- });
+  }); 
+});
 
 router.get('/about', (req, res) => {
   res.render('index/about');

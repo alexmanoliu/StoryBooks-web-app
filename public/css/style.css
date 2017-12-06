@@ -12,15 +12,15 @@ main {
   font-size:25px;
 }
 
-.story-text {
-  height: 120px;
-}
-
 footer{
   margin-top:20px;
 }
 
-.dash-status {
+.story-text{
+  height:120px;
+}
+
+.dash-status{
   text-transform: capitalize;
 }
 
